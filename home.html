@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ycg Nav Fanpage</title>
+    <!--Bootstrap req. includes-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        body {
+          padding-top: 70px;
+          background-image: url(background.jpg);
+          }
+
+        #info{
+          width: 70%;
+          border-style: dotted;
+        }
+        #reviews{
+          border-top: 2cm;
+        }
+        #left {
+          float: left;
+          width: 50%;
+        } 
+
+        #right {
+          float: left;
+          width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="./ycg.png" alt="Logo" style="width:120px;">
+        </a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./aboutUs.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactUs.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    <div id = left>
+     <h5>Updates/Rumors: </h5>
+     <div class id = info>
+       <p>
+         Recent leakers have discovered a file called "droptober.mp3" being emailed from YCG Nav to other known members of the group.
+         This could either be the title of the song or potentially of the forthcoming album/EP. Regardless, new music is on the way!
+       </p>
+     </div>
+     <br>
+     <div class="container-fluid" id = reviews>
+        <h4>Reviews: </h4>
+        <blockquote class="blockquote">
+          <p>Best Album of 2020.</p>
+          <footer class="blockquote-footer">New York Times</footer>
+        </blockquote>
+     </div>
+    </div>
+    <div id = right>
+      <h1>Latest Release: </h1>
+      <div id = "img">
+         <img src="./albumcover.jpg" alt="No 9-5 alum cover" style="width:300px;">
+      </div>
+      <h2>No 9-5</h2>
+      <p>YCG Nav's debut studio album. Streaming now on Soundcloud</p>
+      <h3></h3>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Bootstrap req. includes-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      function updateTable(){
+        let name = document.getElementById('name').value;
+        let sbj = document.getElementById('sbj').value;
+        let msg = document.getElementById('msg').value;
+        let post = '<tr>'+ '<td>'+'<div class="media border p-3">'+'<img src="./ycg.png" alt="profilePic" class="mr-3 mt-3 rounded-circle" style="width:60px;">' + '<div class="media-body">' +' <h4>' + name + '<small><i>' + " " + sbj + '</i></small></h4>' +'<p>'+ msg +'</p>'+'</div>'+'</div>'+ '</td> '+'</tr>';
+        $("#posts").find("tbody").append(post);
+      }
+    </script>
+    <style>
+        body {
+          background-image: url(background.jpg);
+          padding-top: 70px;
+        }
+        #postbutton {
+          background-color: black;
+        } 
+                  
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="./ycg.png" alt="Logo" style="width:120px;">
+        </a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./aboutUs.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactUs.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <table id = "posts" style="width:100%">
+        <tbody>
+          <tr>
+            <th>
+              <div class="media border p-3">
+                <img src="./ycg.png" alt="profilePic" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+                <div class="media-body">
+                  <h4>YCG_Nav_fan420 <small><i>Album Review</i></small></h4>
+                  <p>10/10
+                    
+                    This album is incredible! I don't undertand how they managed to combine so many 
+                    styles and sounds into a single project. That second verse on Crackonomics might 
+                    be one of my favorites of all time. Whoever wrote that is a genius.
+                    Can't wait for the next project!</p>
+                </div>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <div class="media border p-3">
+                <img src="./ycg.png" alt="profilePic" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+                <div class="media-body">
+                  <h4>YCG_Nav_fan420 <small><i>Song Discussion</i></small></h4>
+                  <p>Today I would like to talk about the song 'YCG', the intro track off of No 9-5.
+                    It is most definitely a strong introduction to the artist and as soon as the beat comes in
+                    the song does not let up until it ends. Sonically, the beat was very minimalistic but allows
+                    Nav to show off his lyricall prowess and creativity, which he excells at. What do you guys think?
+                  </p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <form class="form-inline" onsubmit="return false">
+        <label for="name" class="mr-sm-2">Name:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="name">
+        <label for="sbj" class="mr-sm-2">Subject:</label>
+        <input type="subject" class="form-control mb-2 mr-sm-2" id="sbj">
+        <label for="msg" class="mr-sm-2">Post:</label>
+        <textarea rows="2" class="mr-sm-2"  id="msg" required data-validation-required-message="Please enter a message."></textarea>
+        <button onclick = "updateTable()" class="btn btn-primary mb-2" id = "postbutton">Post</button>
+      </form>
+
+  </body>
+</html>
